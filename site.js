@@ -82,7 +82,14 @@ const vue_app = Vue.createApp({
                         movie.hasDisliked = false
                   }
             },
-            posterClick(index) {},
+            posterClick(index) {
+                  const posterArray = this.movies[index].posters
+                  if (this.movies[index].posterindex > posterArray.length - 2) {
+                        this.movies[index].posterindex = 0;
+                  } else {
+                        this.movies[index].posterindex++;
+                  }
+            },
             timeText(minutes) {
                   const hours = Math.trunc(minutes / 60)
                   const mins = minutes % 60
