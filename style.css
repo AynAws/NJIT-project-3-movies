@@ -119,3 +119,14 @@ body {
 }
 
 /* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
+p.liked {
+    color:rgb(0, 197, 0);
+}
+p.disliked {
+    color:red;
+}
+
+.likes:hover,
+.dislikes:hover {
+    background-color: #7a7070;
+}
