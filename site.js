@@ -83,7 +83,11 @@ const vue_app = Vue.createApp({
                   }
             },
             posterClick(index) {},
-            timeText(minutes) {}
+            timeText(minutes) {
+                  const hours = Math.trunc(minutes / 60)
+                  const mins = minutes % 60
+                  return `${hours}h ${mins}m`
+            }
       }
 })
 
