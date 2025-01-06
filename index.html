@@ -44,7 +44,7 @@
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movie.iscore }} </p>
 						<p class="runtime">Runtime: {{ timeText(movie.runtime) }}</p>
 						<p class="released">Released: {{ makeTextDate(movie.released) }} | Rated: {{ movie.rating }}</p>
-						<p class="websites">Websites: <a> imdb </a> | <a>website</a></p>
+						<p class="websites">Websites: <a v-bind:href="movies[index].imdb" target="_blank"> imdb </a> | <a v-bind:href="movies[index].website" target="_blank">website</a></p>  
 
 			            <div class="social">
 			              <p :class="{'likes':true, 'liked': movie.hasLiked}" @click="like(index)"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movie.likes }}</p>
