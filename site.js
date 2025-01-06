@@ -36,11 +36,20 @@ const vue_app = Vue.createApp({
             title: "IMDB + Ayaan’s Top 8 Movies",
             owner: "Ayaan",
             repoLink: "https://github.com/AynAws/NJIT-project-3-movies"
-         
       }
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+            makeTextDate(dateArray) {},
+            like(index) {
+                  this.movies[index].likes++
+                  test++
+            },
+            dislike(index) {
+                  this.movies[index].dislikes++
+            },
+            posterClick(index) {},
+            timeText(minutes) {}
       }
 })
 
