@@ -68,5 +68,47 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+      {
+            "title": "Harry Potter and the Sorcerer's Stone",
+            "iscore": 7.7,
+            "rating": "PG",
+            "runtime": 152,
+            "released": [2001, 11, 16],
+            "country": "USA",
+            "posters": ["img/harryPotterPoster1.jpg", "img/harryPotterPoster2.jpg", "img/harryPotterPoster3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0241527/",
+            "website": "https://www.warnerbros.com/movies/harry-potter-and-sorcerers-stone",
+            "likes": 114,
+            "dislikes": 23,
+            "posterindex": 0
+      }
+      {
+            "title": "Logan",
+            "iscore": 8.1,
+            "rating": "R",
+            "runtime": 137,
+            "released": [2017, 3, 3],
+            "country": "USA",
+            "posters": ["img/loganPoster1.jpg", "img/loganPoster2.jpg", "img/loganPoster3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt3315342/",
+            "website": "https://www.20thcenturystudios.com/movies/logan",
+            "likes": 94,
+            "dislikes": 19,
+            "posterindex": 0
+      }
+      {
+            "title": "Dune: Part 1",
+            "iscore": 8.0,
+            "rating": "PG-13",
+            "runtime": 155,
+            "released": [2021, 10, 22],
+            "country": "USA",
+            "posters": ["img/dunePoster1.jpg", "img/dunePoster2.jpg", "img/dunePoster3.jpg", "img/dunePoster4.jpg"],
+            "imdb": "https://www.imdb.com/title/tt1160419/",
+            "website": "https://www.warnerbros.co.uk/movies/dune",
+            "likes": 201,
+            "dislikes": 73,
+            "posterindex": 0
       }
 ]
