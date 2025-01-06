@@ -26,7 +26,11 @@ const vue_app = Vue.createApp({
       //   the variable: movies
       created () {
             fetch('movies.json').then(response => response.json()).then(json => {
-                  this.movies = json
+                  this.movies = json.map(movie => ({
+                        ...movie,
+                        hasLiked: false,
+                        hasDisliked: false //default states for like/dislike tracking
+                  }))
             })
       },
       data() {
@@ -42,11 +46,34 @@ const vue_app = Vue.createApp({
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
             makeTextDate(dateArray) {},
             like(index) {
-                  this.movies[index].likes++
-                  test++
+                  const movie = this.movies[index]
+                  if (!movie.hasLiked) {
+                        if (movie.hasDisliked) {
+                              movie.dislikes--
+                              movie.hasDisliked = false
+                        }
+                        movie.likes++
+                        movie.hasLiked = true
+                  }
+                  else {
+                        movie.likes--
+                        movie.hasLiked = false
+                  }
             },
             dislike(index) {
-                  this.movies[index].dislikes++
+                  const movie = this.movies[index]
+                  if (!movie.hasDisliked) {
+                        if (movie.hasLiked) {
+                              movie.likes--
+                              movie.hasLiked = false
+                        }
+                        movie.dislikes++
+                        movie.hasDisliked = true
+                  }
+                  else {
+                        movie.dislikes--
+                        movie.hasDisliked = false
+                  }
             },
             posterClick(index) {},
             timeText(minutes) {}
