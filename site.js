@@ -44,7 +44,14 @@ const vue_app = Vue.createApp({
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-            makeTextDate(dateArray) {},
+            makeTextDate(dateArray) {
+                  const months = [
+                        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+                  ]
+                  const [year, month, day] = dateArray
+                  const monthName = months[month - 1]
+                  return `${monthName} ${day}, ${year}`
+            },
             like(index) {
                   const movie = this.movies[index]
                   if (!movie.hasLiked) {
